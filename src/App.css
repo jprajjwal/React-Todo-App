@@ -1,0 +1,122 @@
+body{
+  background-color: #0f0d0df5;
+  color: #ddd;
+}
+*{
+  box-sizing: border-box;
+}
+main{
+  /* max-width:800px; */
+  margin: 20px auto;
+  display: flex;
+}
+
+.container{
+  width: 50vw;
+  padding: 50px;
+}
+.tasks{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  padding: 60px 150px;
+}
+form{
+  border: 3px solid #3d3b30;
+  border-radius: 30px;
+  padding: 15px;
+  display:flex;
+  margin-bottom:  40px;
+}
+form input[type="text"] {
+  background: none;
+  color:#fff;
+  border:0;
+  padding: 1px 15px;
+  display:block;
+  width: 100%;
+  font-size: 25px;
+}
+form button{
+  background-color: #be9f23;
+  border:0;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+div.task{
+  background-color: #30313D;
+  border-radius: 10px;
+  padding: 10px 19px;
+  margin-top: 10px;
+  display:flex;
+  align-items: center;
+  transition: opacity .3s linear;
+  font-size: 25px;
+}
+div.task svg{
+  height: 20px;
+  margin-right: 16px;
+  fill: #be9f23;
+}
+div.task.done{
+  opacity: 0.3;
+}
+div.task-name, div.task form{
+  flex-grow:1;
+}
+div.task span{
+  position:relative;
+}
+div.task span:before{
+  content:'';
+  display:block;
+  width:0;
+  height:1px;
+  background-color: #ddd;
+  position:absolute;
+  top: 20px;
+  transition: width .1s linear;
+}
+div.task.done span:before{
+  width: 100%;
+}
+.title{
+  text-align: center;
+  color: #be9f23;
+  font-weight: 800;
+  font-size: 50px;
+  margin-top: 0px;
+}
+h1{
+  text-align: center;
+  
+}
+h2{
+  text-align: center;
+  margin-top: 100px;
+  
+}
+
+div.checkbox{
+  display:flex;
+  align-items: center;
+}
+
+button.trash{
+  background:none;
+  border:none;
+  display:flex;
+  cursor:pointer;
+}
+button.trash svg{
+  fill: #888;
+  height: 14px;
+}
+div.task input{
+  border: 2px solid #555;
+  border-radius:5px;
+  padding: 2px 4px;
+}
